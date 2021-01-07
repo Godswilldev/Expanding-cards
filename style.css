@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color:#f7f7f7;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    height: 80vh;
+    border-radius: 50px;
+    margin-right: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 0.5;
+    position: relative;
+    transition: all 0.7s ease-in-out;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+
+}
+
+.panel h3 {
+    color: #fff;
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out 0.5s;
+}
+
+@media (max-width:500px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+.panel1 {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../images/running-free.jpg);
+}
+
+.panel2 {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../images/somwarpet.jpg);
+}
+
+.panel3 {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../images/trip-to-nowhere.jpg);
+}
+
+.panel4 {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../images/unforeseen-corners.jpg);
+}
+
+.panel5 {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../images/world-tour.jpg);
+}
